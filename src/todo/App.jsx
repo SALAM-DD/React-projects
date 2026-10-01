@@ -49,14 +49,14 @@ export default function App() {
                 <div className="todo-list-wrapper">
                     {tasks.length === 0 ? (
                         <div className="todo-empty">
-                            <span className="empty-icon">📝</span>
+                            <span className="empty-icon"></span>
                             <p>No tasks yet. Type a task above and click <strong>Add</strong>!</p>
                         </div>
                     ) : (
                         <ul className="todo-list">
                             {tasks.map((task, index) => (
                                 <li key={index} className="todo-item">
-                                    <span className="todo-bullet">{index + 1}</span>
+
                                     <span className="todo-text">{task}</span>
                                     <button
                                         type="button"
