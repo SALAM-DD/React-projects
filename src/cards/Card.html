@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #d6d6e0;
+    }
+
+    .card {
+      background: #86b606;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    .card h1 {
+      margin-top: 0;
+      color: #b86086;
+      font-size: 25px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin: 6px 0;
+      color: #0fd4d4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="js-container"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+  <script type="text/babel">
+    function StudentCard({ name, course, level, State, imageSrc, width }) {
+      return (
+        <div className="card">
+          <h1>Student Details</h1>
+          {imageSrc && <img src={imageSrc} alt={name} />}
+          <p>Name : {name}</p>
+          <p>Course : {course}</p>
+          <p>Level : {level}</p>
+          <p>State : {State}</p>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <StudentCard
+            name="Bilal"
+            course="Software Engineering"
+            level="Advanced Diploma"
+            State="Toronto"
+            imageSrc="dim.jpg"
+            width="200"
+          />
+          <StudentCard
+            name="Basith"
+            course="Computer Networking"
+            level="Advanced Diploma"
+            State="Barcelona"
+            imageSrc="emu.jpg"
+            width="200"
+          />
+          <StudentCard
+            name="Haris"
+            course="Information Technology System"
+            level="Advanced Diploma"
+            State="Dubai"
+            imageSrc="sit.png"
+            width="200"
+          />
+        </>
+      );
+    }
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(<App />);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+body{font-family:sans-serif;max-width:800px;margin:0 auto;padding:1rem}
+h1{margin-bottom:.25rem}
+.campus-section{margin-bottom:1.5rem}
+.selector-btn.active{font-weight:bold;text-decoration:underline}
+button{margin-right:.5rem;cursor:pointer}
+input{padding:.3rem;margin-right:.5rem}
+.study-task.task-done .task-title{text-decoration:line-through;color:#999}
+.task-ul{list-style:none;padding:0}
+.study-task{margin-bottom:.5rem}
